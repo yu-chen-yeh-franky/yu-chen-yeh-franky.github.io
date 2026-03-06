@@ -19,6 +19,8 @@
     .btn:hover { background:#555; transform:translateY(-3px); }
     .social { font-size:2rem; margin:0 1rem; color:#888; text-decoration:none; }
     .social:hover { color:white; }
+    .copy-btn { background:#333; border:none; color:#aaa; padding:0.3rem 0.7rem; border-radius:6px; cursor:pointer; font-size:0.85rem; margin-left:0.5rem; transition:0.2s; }
+    .copy-btn:hover { background:#555; color:white; }
   </style>
 </head>
 <body>
@@ -28,6 +30,12 @@
     <p class="tagline">independent developer</p>
     <p style="color:#c0c0c0; font-size:1.1rem; margin-bottom:1.5rem;">Hi there! I love building things that make the planet smile. 🌍</p>
 
+    <p style="color:#a0a0a0; font-size:1rem; margin-bottom:1.5rem;">
+      <i class="fa-solid fa-envelope" style="margin-right:0.4rem;"></i>
+      <span id="email-text">franky.2.0808@gmail.com</span>
+      <button class="copy-btn" onclick="copyEmail()"><i class="fa-regular fa-copy"></i> Copy</button>
+    </p>
+
     <div class="links">
       <a href="https://apps.apple.com/developer/yu-chen-yeh/id1674576975" class="btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-apple"></i> My Apps on App Store</a>
       <a href="https://play.google.com/store/apps/developer?id=YU+CHEN+YEH+Apps" class="btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-play"></i> My Apps on Google Play</a>
@@ -35,5 +43,15 @@
       <a href="https://github.com/yu-chen-yeh-franky" class="btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
     </div>
   </div>
+  <script>
+    function copyEmail() {
+      const email = document.getElementById('email-text').textContent;
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied';
+        setTimeout(() => { btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy'; }, 2000);
+      });
+    }
+  </script>
 </body>
 </html>
