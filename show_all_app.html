@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-TW">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,19 +12,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <div class="container">
-      <a href="index.html" class="btn"
-        ><i class="fa-solid fa-house"></i> Home
-      </a>
+      <div class="links">
+        <a href="index.html" class="btn"
+          ><i class="fa-solid fa-house"></i> Home
+        </a>
+      </div>
 
       <h1>YU CHEN YEH - Franky Apps</h1>
 
       <div class="app-grid">
-        <!-- 在這裡重複加入你的 App 卡片 -->
-
         <a
           href="VibeCraft_Timer_Page.html"
           style="text-decoration: none; color: inherit"
@@ -37,7 +37,10 @@
             />
             <div>
               <h3 class="app-name">VibeCraft Timer</h3>
-              <p class="app-desc">簡短描述文字，一行或兩行即可。</p>
+              <p class="app-desc">
+                lets you set customizable haptic reminders that gently notify
+                you when your time is up
+              </p>
               <div class="app-tags">
                 <span class="app-tag-gray">free</span>
                 <span class="app-tag">watchOS</span>
@@ -46,23 +49,27 @@
           </div>
         </a>
 
-        <div class="app-card">
-          <img
-            src="assets/app_icon/Note_Card_Copy_Cat_icon.png"
-            alt="App2"
-            class="app-icon"
-          />
-          <div>
-            <h3 class="app-name">Note Card Copy Cat</h3>
-            <p class="app-desc">簡短描述文字，一行或兩行即可。</p>
-            <div class="app-tags">
-              <span class="app-tag-gray">free</span>
-              <span class="app-tag">iOS</span>
-              <span class="app-tag">Android</span>
+        <a
+          href="Note_Card_Copy_Cat_Page.html"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="app-card">
+            <img
+              src="assets/app_icon/Note_Card_Copy_Cat_icon.png"
+              alt="App2"
+              class="app-icon"
+            />
+            <div>
+              <h3 class="app-name">Note Card Copy Cat</h3>
+              <p class="app-desc">簡短描述文字，一行或兩行即可。</p>
+              <div class="app-tags">
+                <span class="app-tag-gray">free</span>
+                <span class="app-tag">iOS</span>
+                <span class="app-tag">Android</span>
+              </div>
             </div>
           </div>
-        </div>
-
+        </a>
         <div class="app-card">
           <img
             src="assets/app_icon/Princess_Card_Trick_icon.png"
