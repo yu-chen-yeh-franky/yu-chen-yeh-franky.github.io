@@ -148,13 +148,7 @@ h1 {
 	max-width: 620px;
 	margin: 0 auto 3rem;
 }
-.store-btns {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 1.2rem;
-	margin: 3rem 0;
-}
+
 .back-link {
 	display: inline-flex;
 	align-items: center;
@@ -165,4 +159,6 @@ h1 {
 	font-size: 1rem;
 }
 .back-link:hover { color: #ccc; }
+
+
 
