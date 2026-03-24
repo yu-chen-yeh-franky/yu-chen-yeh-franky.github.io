@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <title>Apps : YU CHEN YEH - Franky</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #0f0f0f;
+        color: #e0e0e0;
+        min-height: 100%;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+      }
+      .subtitle {
+        font-size: 1.3rem;
+        color: #a0a0a0;
+        margin-bottom: 3rem;
+      }
+      .app-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+        margin-top: 2rem;
+      }
+      @media (max-width: 850px) {
+        .app-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .app-card {
+        background: #1a1a1a;
+        border-radius: 16px;
+        padding: 1.5rem;
+        text-align: left;
+        transition: 0.2s;
+        display: flex;
+        align-items: center;
+      }
+      .app-card:hover {
+        transform: translateY(-4px);
+        background: #222;
+      }
+      .app-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 18px;
+        object-fit: cover;
+        margin-right: 1rem;
+      }
+      .app-name {
+        font-size: 1.35rem;
+        margin: 0.5rem 0 0.3rem;
+        color: #fff;
+      }
+      .app-desc {
+        color: #b0b0b0;
+        font-size: 0.98rem;
+        line-height: 1.5;
+        margin-bottom: 1.2rem;
+      }
+      .app-link {
+        color: #4da6ff;
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .app-link:hover {
+        color: #80c0ff;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #888;
+        text-decoration: none;
+        margin-bottom: 2rem;
+        font-size: 1.05rem;
+        padding: 0.5rem 1.2rem;
+        border-radius: 8px;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .back-btn:hover,
+      .back-btn:focus {
+        color: #fff;
+        background: #222;
+        outline: none;
+      }
+      .app-tags {
+        margin-top: 0.2rem;
+      }
+      .app-tag {
+        display: inline-block;
+        background: #2a2a2a;
+        color: #4da6ff;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        padding: 0.18em 0.8em;
+        margin-right: 0.5em;
+        margin-bottom: 0.2em;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+
+      .app-tag-gray {
+        display: inline-block;
+        background: #2a2a2a;
+        color: #c3c3c4;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        padding: 0.18em 0.8em;
+        margin-right: 0.5em;
+        margin-bottom: 0.2em;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+      </a>
+
+      <h1>YU CHEN YEH - Franky Apps</h1>
+
+      <div class="app-grid">
+        <!-- 在這裡重複加入你的 App 卡片 -->
+
+        <div class="app-card">
+          <img
+            src="assets/app_icon/VibeCraft_Timer_icon.png"
+            alt="App1"
+            class="app-icon"
+          />
+          <div>
+            <h3 class="app-name">VibeCraft Timer</h3>
+            <p class="app-desc">簡短描述文字，一行或兩行即可。</p>
+            <div class="app-tags">
+              <span class="app-tag-gray">free</span>
+              <span class="app-tag">watchOS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <img
+            src="assets/app_icon/Note_Card_Copy_Cat_icon.png"
+            alt="App2"
+            class="app-icon"
+          />
+          <div>
+            <h3 class="app-name">Note Card Copy Cat</h3>
+            <p class="app-desc">簡短描述文字，一行或兩行即可。</p>
+            <div class="app-tags">
+              <span class="app-tag-gray">free</span>
+              <span class="app-tag">iOS</span>
+              <span class="app-tag">Android</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <img
+            src="assets/app_icon/Princess_Card_Trick_icon.png"
+            alt="App2"
+            class="app-icon"
+          />
+          <div>
+            <h3 class="app-name">Princess Card Trick</h3>
+            <p class="app-desc">簡短描述文字，一行或兩行即可。</p>
+            <div class="app-tags">
+              <span class="app-tag-gray">paid</span>
+              <span class="app-tag">iOS</span>
+              <span class="app-tag">Android</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <img
+            src="assets/app_icon/Predict_Card_Magic_Trick_icon.png"
+            alt="App2"
+            class="app-icon"
+          />
+          <div>
+            <h3 class="app-name">Predict Card Magic Trick</h3>
+            <p class="app-desc">簡短描述文字，一行或兩行即可。</p>
+            <div class="app-tags">
+              <span class="app-tag-gray">paid</span>
+              <span class="app-tag">iOS</span>
+              <span class="app-tag">Android</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 複製上面整個 <div class="app-card"> ... </div> 來新增更多 App -->
+      </div>
+    </div>
+  </body>
+</html>
