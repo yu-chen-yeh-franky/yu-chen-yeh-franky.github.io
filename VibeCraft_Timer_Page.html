@@ -126,16 +126,11 @@
     function toggleFaq(btn) {
       const answer = btn.nextElementSibling;
       const icon = btn.querySelector('.faq-icon');
-      const isOpen = answer.classList.contains('open');
-      document.querySelectorAll('.faq-answer.open').forEach(el => {
-        el.classList.remove('open');
-        el.previousElementSibling.querySelector('.faq-icon').classList.remove('rotated');
-      });
-      if (!isOpen) {
-        answer.classList.add('open');
-        icon.classList.add('rotated');
-      }
+      answer.classList.toggle('open');
+      icon.classList.toggle('rotated');
     }
+    document.querySelector('.faq-item .faq-answer').classList.add('open');
+    document.querySelector('.faq-item .faq-icon').classList.add('rotated');
   </script>
   </body>
 </html>
