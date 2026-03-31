@@ -44,6 +44,98 @@
         </a>
       </div>
 
+      <div class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What is VibeCraft Timer?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            VibeCraft Timer is an Apple Watch app that delivers gentle, customizable vibrations to discreetly notify you when time is up — perfect for meditation, focused work, or any situation where silent reminders are preferred.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do I need my iPhone nearby to use this app?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            No. VibeCraft Timer runs directly on your Apple Watch. Once set up, the timer works independently without needing your iPhone nearby.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I customize the vibration intensity?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Open the app and tap "Set Vibration" on the main screen. You can then adjust the intensity level — for example, setting it to 4 will produce vibrations every 5 seconds. Use the 3-second test timer to preview the effect before starting.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is there a way to test the vibration before starting the timer?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Yes! VibeCraft Timer includes a built-in Test Mode. Tap the 3-second trial timer to instantly preview the vibration effect with your current settings before committing to a full session.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is the app free? Are there any in-app purchases?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <!-- TODO:要修正成有內購功能 -->
+          <div class="faq-answer">
+            VibeCraft Timer is completely free to download with no in-app purchases.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Does the app collect any personal data?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            No. The developer does not collect any data from this app. Your privacy is fully protected.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What Apple Watch versions are required?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            VibeCraft Timer requires watchOS 11.5 or later on Apple Watch.
+          </div>
+        </div>
+
       </div>
+
+      </div>
+
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = answer.classList.contains('open');
+      document.querySelectorAll('.faq-answer.open').forEach(el => {
+        el.classList.remove('open');
+        el.previousElementSibling.querySelector('.faq-icon').classList.remove('rotated');
+      });
+      if (!isOpen) {
+        answer.classList.add('open');
+        icon.classList.add('rotated');
+      }
+    }
+  </script>
   </body>
 </html>
