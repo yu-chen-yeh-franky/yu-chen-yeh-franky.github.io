@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yu-chen-yeh-franky.github.io/sitemap.xml
