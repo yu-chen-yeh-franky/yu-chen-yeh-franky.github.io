@@ -32,12 +32,10 @@
       </div>
 
       <h1>Note Card Copy Cat</h1>
-      <p class="subtitle">....</p>
+      <p class="subtitle">Reorderable Note Cards & Copy</p>
 
       <p class="description">
-        這裡放 App 的詳細介紹文字。<br />
-        可以說明主要功能、解決什麼問題、為什麼值得下載等。<br />
-        保持簡潔有力，大約 3~6 行即可。
+        Write Ideas on Cards, Copy Them Anywhere | Just Like Real Life!
       </p>
 
       <div class="links">
@@ -49,6 +47,78 @@
         </a>
       </div>
 
+      <div class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What is Note Card Copy Cat?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Note Card Copy Cat is a lightweight utility app that lets you write ideas on individual note cards, reorder them with drag-and-drop, and copy any card's content to your clipboard with a single tap.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Does the app require an internet connection or account?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            No. Note Card Copy Cat works 100% offline. All data is stored locally on your device — no account, no cloud sync, and no internet connection required.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is there any subscription or in-app purchase?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            No. The app is completely free with no ads and no subscriptions. All features are available from the moment you download it.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What can I use Note Card Copy Cat for?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            It's great for shopping lists, daily to-do items, brain dumps, reusable templates, codes, and any information you frequently need to copy and paste.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I delete a card?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Swipe left on the card you want to remove, then tap the delete button that appears.
+          </div>
+        </div>
       </div>
+
+      <!-- 讓下方留一大段空白 -->
+      <div style="height: 300px;">
+
+      </div>
+
+
+
+      </div>
+
+    <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      answer.classList.toggle('open');
+      icon.classList.toggle('rotated');
+    }
+    document.querySelector('.faq-item .faq-answer').classList.add('open');
+    document.querySelector('.faq-item .faq-icon').classList.add('rotated');
+  </script>
   </body>
 </html>
