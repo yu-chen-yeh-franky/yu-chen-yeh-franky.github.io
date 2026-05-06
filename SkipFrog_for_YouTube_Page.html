@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkipFrog for YouTube - YU CHEN YEH - Franky</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="main.css?v=2" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="links">
+        <a href="index.html" class="btn mr-2 mb-2"
+          ><i class="fa-solid fa-house"></i> Home
+        </a>
+        <a href="show_all_app.html" class="btn mb-2"
+          ><i class="fa-solid fa-mobile-screen"></i> Apps
+        </a>
+      </div>
+
+      <div class="flex justify-center">
+        <img
+          src="assets/app_icon/SkipFrog_for_YouTube_icon.png"
+          alt="SkipFrog for YouTube icon"
+          class="app-icon"
+        />
+      </div>
+
+      <h1>SkipFrog for YouTube</h1>
+      <p class="subtitle">Skip &amp; Loop Custom Segments in YouTube Videos</p>
+
+      <div class="links">
+        <a
+          href="https://chromewebstore.google.com/detail/skipfrog-for-youtube/magdfeionobbjhodddknpllbpdpmcmac"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn"
+        >
+          <i class="fa-brands fa-chrome"></i> Chrome Web Store
+        </a>
+      </div>
+
+      <div class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What is SkipFrog for YouTube?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            SkipFrog is a Chrome extension that lets you mark custom time segments in any YouTube video and automatically skip or loop them during playback. It's perfect for jumping past unwanted tracks in long compilation or DJ mix videos, skipping intros and sponsored content, or repeating your favorite sections on demand.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is the extension free?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Yes. SkipFrog for YouTube is completely free to install and use from the Chrome Web Store.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I add multiple segments to a single video?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Yes. You can define multiple custom segments per video and mix skip and loop behaviors so that long mixes, compilations, or lectures play back exactly the way you want.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What are the most common use cases?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <ul style="list-style: disc; padding-left: 1.4rem; margin: 0;">
+              <li>Skipping tracks you don't like in hour-long DJ mixes or music compilations</li>
+              <li>Jumping past intros, outros, and sponsored segments</li>
+              <li>Looping a favorite chorus, dance move, or tutorial step on repeat</li>
+              <li>Cleaning up rewatch experiences for long-form content</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Will it slow down my browser or YouTube playback?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            SkipFrog is intentionally lightweight and runs only on YouTube pages, so the impact on browser performance and video playback is minimal.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Does the extension collect any personal data?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            No. I don't collect or use your data — SkipFrog handles your custom segments locally in your browser, without tracking your activity.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Which browsers are supported?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            SkipFrog is published on the Chrome Web Store and works on Google Chrome.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 讓下方留一大段空白 -->
+      <div style="height: 300px;">
+
+      </div>
+
+      </div>
+
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      answer.classList.toggle('open');
+      icon.classList.toggle('rotated');
+    }
+    document.querySelector('.faq-item .faq-answer').classList.add('open');
+    document.querySelector('.faq-item .faq-icon').classList.add('rotated');
+  </script>
+  </body>
+</html>
