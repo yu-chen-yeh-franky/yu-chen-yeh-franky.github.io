@@ -14,7 +14,7 @@
 
 ## Site architecture
 
-- `index.html` is the personal landing page and links to the app catalogue (`show_all_app.html`) and support page (`support.html`).
+- `index.html` is the personal landing page and links to the app catalogue (`show_all_app.html`) and support page (`support.html`). It is deliberately minimal: no app cards, app names or FAQ (those live in `show_all_app.html` and the app pages). Its only body text is a one-sentence intro at the bottom; the same sentence is the meta / OG / Twitter description and the `Person` `description` in the site-level JSON-LD (`WebSite`, `ProfilePage`, `Person`) in its `<head>`, so change them together.
 - `show_all_app.html` is the app directory. Each card links to a standalone `<App_Name>_Page.html` marketing page and uses the matching image in `assets/app_icon/`.
 - Every app page is self-contained: SEO metadata and JSON-LD are in its `<head>`, and its FAQ markup and `toggleFaq()` behavior are embedded in the page. App pages link to external stores rather than application code in this repository.
 - `main.css` supplies shared layout, dark-theme, app-card, button, and FAQ styles. `support.html` keeps its support-page-specific styles inline.

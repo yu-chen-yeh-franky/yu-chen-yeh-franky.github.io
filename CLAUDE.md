@@ -10,7 +10,7 @@ To preview locally, open the `.html` files in a browser or run any static server
 
 ## Site structure
 
-- `index.html` – landing page (avatar, email copy button, links to Apps / YouTube / GitHub / Medium / Printables / Support).
+- `index.html` – landing page (avatar, email copy button, links to Apps / YouTube / GitHub / Medium / Printables / Support), kept deliberately minimal: no app cards, app names or FAQ here (those live in `show_all_app.html` and the app pages). The only body text is a one-sentence intro at the bottom; the same sentence is the meta / OG / Twitter description and the `Person` `description` in the site-level JSON-LD (`WebSite`, `ProfilePage`, `Person`) in its `<head>`, so change them together.
 - `show_all_app.html` – grid of app cards; each card links to a `*_Page.html` and shows platform tags (`app-tag`) and a free/paid tag (`app-tag-gray`).
 - `<App_Name>_Page.html` – one page per app (currently SkipFrog for YouTube, VibeCraft Timer, Predict Card Magic Trick, Note Card Copy Cat, Princess Card Trick).
 - `support.html` – contact info, Google Form link, general FAQ.
