@@ -32,7 +32,7 @@
           "@type": "SoftwareApplication",
           "@id": "https://yu-chen-yeh-franky.github.io/Predict_Card_Magic_Trick_Page.html#app",
           "name": "Predict Card Magic Trick",
-          "alternateName": ["Predict Card Magic Trick – Card Prediction Magic App for iOS & Android", "Predict Card Magic Trick – Prediction Illusion Close Up"],
+          "alternateName": ["Predict Card Magic Trick Pro", "Predict Card Magic Trick – Card Prediction Magic App for iOS & Android", "Predict Card Magic Trick – Prediction Illusion Close Up"],
           "description": "Card prediction magic app for iPhone & Android: a spectator freely picks any Jack, Queen or King and your phone already predicted it. No setup, works offline.",
           "applicationCategory": "EntertainmentApplication",
           "applicationSubCategory": "Magic trick app",
@@ -69,8 +69,8 @@
           },
           "author": {
             "@type": "Person",
-            "name": "YU CHEN YEH",
-            "alternateName": "Franky",
+            "@id": "https://yu-chen-yeh-franky.github.io/#person",
+            "name": "YU CHEN YEH - Franky",
             "url": "https://yu-chen-yeh-franky.github.io/"
           },
           "video": { "@id": "https://yu-chen-yeh-franky.github.io/Predict_Card_Magic_Trick_Page.html#video" }
@@ -85,7 +85,7 @@
           "duration": "PT19S",
           "contentUrl": "https://www.youtube.com/watch?v=ppQnhk8IS2I",
           "embedUrl": "https://www.youtube.com/embed/ppQnhk8IS2I",
-          "author": { "@type": "Person", "name": "YU CHEN YEH" }
+          "author": { "@id": "https://yu-chen-yeh-franky.github.io/#person" }
         },
         {
           "@type": "FAQPage",
@@ -129,7 +129,7 @@
             {
               "@type": "Question",
               "name": "Which devices is the app available on?",
-              "acceptedAnswer": { "@type": "Answer", "text": "The app is available for iPhone on the Apple App Store and for Android phones on Google Play." }
+              "acceptedAnswer": { "@type": "Answer", "text": "The app is available for iPhone on the Apple App Store and for Android phones on Google Play, where it is listed as Predict Card Magic Trick Pro." }
             },
             {
               "@type": "Question",
@@ -210,6 +210,19 @@
         font-size: 0.9rem;
         margin-top: 0.6rem;
       }
+      .subtitle { margin-bottom: 0.5rem; }
+      .byline {
+        color: #888;
+        font-size: 0.95rem;
+        margin: 0 0 3rem;
+      }
+      .byline a {
+        color: #c0c0c0;
+        text-decoration: underline;
+        text-decoration-color: #444;
+        text-underline-offset: 3px;
+      }
+      .byline a:hover { color: #fff; }
       .related-apps {
         max-width: 680px;
         margin: 3rem auto 0;
@@ -239,7 +252,7 @@
 
       <div class="flex justify-center">
         <img
-          src="assets/app_icon/Predict_Card_Magic_Trick_icon.png"
+          src="assets/app_icon/Predict_Card_Magic_Trick_icon_160.png"
           alt="Predict Card Magic Trick app icon"
           class="app-icon"
           width="80"
@@ -249,6 +262,7 @@
 
       <h1>Predict Card Magic Trick</h1>
       <p class="subtitle">Card prediction magic app for iPhone &amp; Android</p>
+      <p class="byline">by <a href="index.html" rel="author">YU CHEN YEH - Franky</a></p>
 
       <div class="links">
         <a href="https://apps.apple.com/app/predict-card-magic-trick/id6445894214" target="_blank" rel="noopener" class="btn">
@@ -386,7 +400,7 @@
             <i class="fa-solid fa-chevron-down faq-icon"></i>
           </button>
           <div class="faq-answer">
-            The app is available for iPhone on the <a href="https://apps.apple.com/app/predict-card-magic-trick/id6445894214" target="_blank" rel="noopener">Apple App Store</a> and for Android phones on <a href="https://play.google.com/store/apps/details?id=tw.franky.pro_predict_card" target="_blank" rel="noopener">Google Play</a>.
+            The app is available for iPhone on the <a href="https://apps.apple.com/app/predict-card-magic-trick/id6445894214" target="_blank" rel="noopener">Apple App Store</a> and for Android phones on <a href="https://play.google.com/store/apps/details?id=tw.franky.pro_predict_card" target="_blank" rel="noopener">Google Play</a>, where it is listed as Predict Card Magic Trick Pro.
           </div>
         </div>
 
@@ -423,11 +437,11 @@
       </div>
 
       <section class="related-apps">
-        <h2>More Magic Apps by the Same Developer</h2>
+        <h2>More Magic Apps by YU CHEN YEH - Franky</h2>
         <a href="Princess_Card_Trick_Page.html">
           <div class="app-card">
             <img
-              src="assets/app_icon/Princess_Card_Trick_icon.png"
+              src="assets/app_icon/Princess_Card_Trick_icon_160.png"
               alt="Princess Card Trick app icon"
               class="app-icon"
               width="80"
@@ -436,7 +450,7 @@
             />
             <div>
               <h3 class="app-name">Princess Card Trick - Magic</h3>
-              <p class="app-desc">Mind-reading card magic: your friend memorizes one of six cards, removes one, and that exact card has vanished.</p>
+              <p class="app-desc">A mind-reading card magic effect you can perform with just your phone.</p>
               <div class="app-tags">
                 <span class="app-tag-gray">paid</span>
                 <span class="app-tag">iOS</span>

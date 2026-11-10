@@ -71,8 +71,8 @@
           },
           "author": {
             "@type": "Person",
-            "name": "YU CHEN YEH",
-            "alternateName": "Franky",
+            "@id": "https://yu-chen-yeh-franky.github.io/#person",
+            "name": "YU CHEN YEH - Franky",
             "url": "https://yu-chen-yeh-franky.github.io/"
           },
           "video": { "@id": "https://yu-chen-yeh-franky.github.io/Princess_Card_Trick_Page.html#video" }
@@ -87,7 +87,7 @@
           "duration": "PT30S",
           "contentUrl": "https://www.youtube.com/watch?v=U1Nl6OLsX_o",
           "embedUrl": "https://www.youtube.com/embed/U1Nl6OLsX_o",
-          "author": { "@type": "Person", "name": "YU CHEN YEH" }
+          "author": { "@id": "https://yu-chen-yeh-franky.github.io/#person" }
         },
         {
           "@type": "FAQPage",
@@ -224,6 +224,19 @@
         font-size: 0.9rem;
         margin-top: 0.6rem;
       }
+      .subtitle { margin-bottom: 0.5rem; }
+      .byline {
+        color: #888;
+        font-size: 0.95rem;
+        margin: 0 0 3rem;
+      }
+      .byline a {
+        color: #c0c0c0;
+        text-decoration: underline;
+        text-decoration-color: #444;
+        text-underline-offset: 3px;
+      }
+      .byline a:hover { color: #fff; }
       .related-apps {
         max-width: 680px;
         margin: 3rem auto 0;
@@ -253,7 +266,7 @@
 
       <div class="flex justify-center">
         <img
-          src="assets/app_icon/Princess_Card_Trick_icon.png"
+          src="assets/app_icon/Princess_Card_Trick_icon_160.png"
           alt="Princess Card Trick app icon"
           class="app-icon"
           width="80"
@@ -263,6 +276,7 @@
 
       <h1>Princess Card Trick - Magic</h1>
       <p class="subtitle">Mind reading card magic app for iPhone, iPad &amp; Android</p>
+      <p class="byline">by <a href="index.html" rel="author">YU CHEN YEH - Franky</a></p>
 
       <div class="links">
         <a href="https://apps.apple.com/app/princess-card-trick/id6480343480" target="_blank" rel="noopener" class="btn">
@@ -447,11 +461,11 @@
       </div>
 
       <section class="related-apps">
-        <h2>More Magic Apps by the Same Developer</h2>
+        <h2>More Magic Apps by YU CHEN YEH - Franky</h2>
         <a href="Predict_Card_Magic_Trick_Page.html">
           <div class="app-card">
             <img
-              src="assets/app_icon/Predict_Card_Magic_Trick_icon.png"
+              src="assets/app_icon/Predict_Card_Magic_Trick_icon_160.png"
               alt="Predict Card Magic Trick app icon"
               class="app-icon"
               width="80"
@@ -460,7 +474,7 @@
             />
             <div>
               <h3 class="app-name">Predict Card Magic Trick</h3>
-              <p class="app-desc">Card prediction magic: a spectator freely picks any Jack, Queen or King and your phone reveals it predicted their choice.</p>
+              <p class="app-desc">A card magic effect that predicts the card your audience chooses.</p>
               <div class="app-tags">
                 <span class="app-tag-gray">paid</span>
                 <span class="app-tag">iOS</span>

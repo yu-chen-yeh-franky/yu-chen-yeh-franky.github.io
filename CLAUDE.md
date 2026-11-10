@@ -11,27 +11,27 @@ To preview locally, open the `.html` files in a browser or run any static server
 ## Site structure
 
 - `index.html` – landing page (avatar, email copy button, links to Apps / YouTube / GitHub / Medium / Printables / Support), kept deliberately minimal: no app cards, app names or FAQ here (those live in `show_all_app.html` and the app pages). The only body text is a one-sentence intro at the bottom; the same sentence is the meta / OG / Twitter description and the `Person` `description` in the site-level JSON-LD (`WebSite`, `ProfilePage`, `Person`) in its `<head>`, so change them together.
-- `show_all_app.html` – grid of app cards; each card links to a `*_Page.html` and shows platform tags (`app-tag`) and a free/paid tag (`app-tag-gray`).
+- `show_all_app.html` – grid of app cards; each card links to a `*_Page.html` and shows platform tags (`app-tag`) and a free/paid tag (`app-tag-gray`). Its `<head>` carries `CollectionPage`, `ItemList` and `BreadcrumbList` JSON-LD; the `ItemList` must list the same apps as the cards.
 - `<App_Name>_Page.html` – one page per app (currently SkipFrog for YouTube, VibeCraft Timer, Predict Card Magic Trick, Note Card Copy Cat, Princess Card Trick).
 - `support.html` – contact info, Google Form link, general FAQ.
 - `main.css` – the single shared stylesheet for all pages.
-- `assets/app_icon/<App_Name>_icon.png` – app icons, referenced by both the card grid and the app page (also used as `og:image`).
+- `assets/app_icon/<App_Name>_icon.png` – full-size app icons, used for `og:image` and the JSON-LD `image`. Icons larger than 160px also have a `<App_Name>_icon_160.png` copy (160×160); every `<img>` on the site loads that copy, because the originals are up to 2 MB.
 - `sitemap.xml`, `robots.txt`, `google*.html` – SEO / Search Console verification. Don't touch the Google verification files.
 
 ## Per-app page pattern
 
 Every `*_Page.html` follows the same template (copy an existing one when adding an app):
 
-1. `<head>` SEO block: `<title>`, `meta description`, `canonical`, Open Graph + Twitter meta, and a `SoftwareApplication` JSON-LD script. All of these must agree with each other (same title/description/image/URL). iOS apps also carry `<meta name="apple-itunes-app" content="app-id=…">`.
+1. `<head>` SEO block: `<title>`, `meta description`, `canonical`, Open Graph + Twitter meta, and a `SoftwareApplication` JSON-LD script. All of these must agree with each other (same title/description/image/URL). The JSON-LD `author` is the homepage `Person` (`"@id": "https://yu-chen-yeh-franky.github.io/#person"`). iOS apps also carry `<meta name="apple-itunes-app" content="app-id=…">`.
 2. Font Awesome 6.5.0 from cdnjs, Tailwind v4 browser CDN (`@tailwindcss/browser@4`, used only for small utility classes like `flex justify-center`, `mr-2`, `mb-2`), then `main.css`.
-3. Body: Home/Apps nav buttons → app icon → `<h1>` + `.subtitle` → store buttons (`.btn` linking to Chrome Web Store / App Store / Google Play) → `.faq-section` accordion → a tall spacer `<div>` at the bottom.
+3. Body: Home/Apps nav buttons → app icon → `<h1>` + `.subtitle` + `.byline` ("by YU CHEN YEH - Franky", linking home) → store buttons (`.btn` linking to Chrome Web Store / App Store / Google Play) → `.faq-section` accordion → a tall spacer `<div>` at the bottom.
 4. Inline `toggleFaq()` script; the first FAQ item is opened by default via `document.querySelector('.faq-item .faq-answer').classList.add('open')`.
 
 ## Adding a new app – checklist
 
-1. Add the icon to `assets/app_icon/`.
+1. Add the icon to `assets/app_icon/`, plus a 160×160 `_icon_160.png` copy for the `<img>` tags if the original is larger than that.
 2. Create `<App_Name>_Page.html` from an existing page; update every SEO field and store link.
-3. Add a card to `show_all_app.html` with the right platform / free-paid tags.
+3. Add a card to `show_all_app.html` with the right platform / free-paid tags, and a matching `ListItem` in its `ItemList` JSON-LD (bump `numberOfItems`).
 4. Add a `<url>` entry to `sitemap.xml`.
 5. Optionally add it to the app list in `support.html`.
 
@@ -42,5 +42,6 @@ Every `*_Page.html` follows the same template (copy an existing one when adding 
 - `main.css` is loaded with a cache-busting query string (`main.css?v=N`). When changing CSS, bump the version in the pages you want to pick up the change (pages currently use different values; `index.html` has its own).
 - Dark theme only: background `#0f0f0f`, cards `#1a1a1a`, accent `#4da6ff`. Reuse the existing classes (`.btn`, `.app-card`, `.faq-*`) rather than adding new ones; page-specific styles go in an inline `<style>` (as `support.html` does).
 - Public-facing text is English. Commit messages are written in Traditional Chinese (see `git log`).
+- The developer / brand name is always written in full as `YU CHEN YEH - Franky`, never `YU CHEN YEH` or `Franky` alone, in visible text, meta tags and JSON-LD. The only exception is the `alternateName` lists in `index.html`, which record the names the app stores display.
 - Contact email shown on the site is `franky.2.0808@gmail.com`; the email copy button relies on `#email-text` + `.copy-btn`.
 - `dev.md` holds ad-hoc dev notes (currently just the Font Awesome version).
